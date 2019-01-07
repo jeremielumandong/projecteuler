@@ -6,3 +6,15 @@
 
 """
 
+def multiple(multiples, max):
+    num = 0
+    arrMutiples = set()
+    while(num < max):
+        for multi in multiples:
+            if(num % multi == 0):
+                arrMutiples.add(num)
+        num+=1
+    total = sum(arrMutiples)
+    return total         
+
+print(multiple([3,5], 1000))
